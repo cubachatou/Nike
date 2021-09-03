@@ -413,7 +413,8 @@ textarea.input {
 .rating {
   display: flex;
   align-items: flex-end;
-  font-size: 40px;
+  margin: 0px 0px 10px 0px;
+  font-size: 37px;
   line-height: 0.75;
   transition: opacity 0.3s ease 0s;
 }
@@ -600,7 +601,7 @@ body.ie ._ibg img {
   position: relative;
   overflow: hidden;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-bottom: 36.95%;
 }
 ._video video,
 ._video iframe,
@@ -814,7 +815,6 @@ body.ie ._ibg img {
 .page__latest-product {
   padding: 120px 0 140px;
 }
-
 .welcome__container {
   display: flex;
   column-gap: 70px;
@@ -954,14 +954,79 @@ body.ie ._ibg img {
   display: flex;
   width: 362px;
   height: 362px;
-  padding: 150px 0 50px;
+  margin: 0px 0px 20px 0px;
+  padding: 150px 35px 50px;
   border-radius: 50%;
   background: linear-gradient(360deg, #5CBE3A -33.55%, rgba(92, 190, 58, 0.0860215) 4.82%, rgba(92, 190, 58, 0) 37.59%);
 }
 .item-latest__img-wrapper span {
   flex: 1 1 auto;
 }
+.item-latest__img-wrapper span img {
+  object-fit: contain;
+}
 .item-latest__description {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.item-latest__name {
+  margin: 0px 0px 10px 0px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+.item-latest__price {
+  margin: 0px 0px 20px 0px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+}
+.view {
+  padding: 0px 0px 130px 0px;
+}
+.view__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.view__content {
+  position: relative;
+  padding: 144px 160px 182px 98px;
+  background: #F6FFF3;
+  border-radius: 10px;
+}
+.view__content::before {
+  z-index: -1;
+  content: "View";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg) translate(78.5%, 50%);
+  font-weight: 700;
+  font-size: 218.216px;
+  text-align: center;
+  color: #E5F2E1;
+}
+.view__title {
+  max-width: 362px;
+  margin: 0px 0px 25px 0px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 130%;
+}
+.view__sub-title {
+  max-width: 271px;
+  line-height: 150%;
+}
+.view__video {
+  width: 610px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  right: 0px;
 }

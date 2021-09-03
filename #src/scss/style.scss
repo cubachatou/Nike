@@ -96,6 +96,9 @@ body {
   &__latest-product {
     padding: 120px 0 140px;
   }
+  // .page__view
+  &__view {
+  }
 }
 //===================================================================================================================================
 .welcome {
@@ -264,44 +267,93 @@ body {
       display: flex;
       width: 362px;
       height: 362px;
-      padding: 150px 0 50px;
+      margin: 0px 0px 20px 0px;
+      padding: 150px 35px 50px;
       border-radius: 50%;
       background: linear-gradient(360deg, #5CBE3A -33.55%, rgba(92, 190, 58, 0.0860215) 4.82%, rgba(92, 190, 58, 0) 37.59%);
       span {
         flex: 1 1 auto;
+          img {
+            object-fit: contain;
+          }
       }
 		}
 		// .item-latest__description
 		&__description {
       display: flex;
       flex-direction: column;
+      align-items: center;
 		}
 		// .item-latest__name
 		&__name {
+      margin: 0px 0px 10px 0px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 140%;
+      text-transform: uppercase;
 		}
 		// .item-latest__price
 		&__price {
+      margin: 0px 0px 20px 0px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
 		}
 		// .item-latest__btn
 		&__btn {
 		}
 }
-
-.rating {
-		// .rating__body
-		&__body {
+//=====================================================================================
+.view {
+  padding: 0px 0px 130px 0px;
+		// .view__container
+		&__container {
+      display: flex;
+      align-items: center;
+      position: relative;
 		}
-		// .rating__active
-		&__active {
+		// .view__content
+		&__content {
+      position: relative;
+      padding: 144px 160px 182px 98px;
+      background: #F6FFF3;
+      border-radius: 10px;
+      &::before {
+        z-index: -1;
+        content: 'View';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg) translate(78.5%,50%);
+        font-weight: 700;
+        font-size: 218.216px;
+        text-align: center;
+        color: #E5F2E1;
+      }
 		}
-		// .rating__items
-		&__items {
+		// .view__title
+		&__title {
+      max-width: 362px;
+      margin: 0px 0px 25px 0px;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 130%;
 		}
-		// .rating__item
-		&__item {
+		// .view__sub-title
+		&__sub-title {
+      max-width: 271px;
+      line-height: 150%;
 		}
-		// .rating__value
-		&__value {
+		// .view__video
+		&__video {
+      width: 610px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0px,-50%);
+      right: 0px;
 		}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
