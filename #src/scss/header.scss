@@ -1,0 +1,101 @@
+//====================================================================================================
+.header {
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+		// .header__container
+		&__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 130px;
+		}
+		// .header__logo
+		&__logo {
+      flex: 0 0 95px;
+      min-height: 33px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M52.9358 10.942L47.0844 12.4784L30.8488 16.7286C25.1151 18.1473 20.0996 20.037 15.2666 18.3828C8.69705 15.5454 8.81478 8.16344 13.7125 0.310547C5.05317 7.45703 -10.529 30.3093 10.5455 32.6169C13.2298 32.9701 18.0098 32.0282 23.2019 29.8442L47.0844 20.0428L94.1899 0.781484L52.9358 10.942Z' fill='%230D2903'/%3E%3C/svg%3E") no-repeat 50% 50% / cover;
+		}
+		// .header__shop-btn
+		&__shop-btn {
+		}
+}
+
+.menu {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+		// .menu__body
+		&__body {
+		}
+		// .menu__list
+		&__list {
+      display: flex;
+      column-gap: 30px;
+		}
+		// .menu__item
+		&__item {
+      &._active .menu__link {
+        opacity: 1;
+      }
+      @media (any-hover: hover) {
+        &:hover .menu__link {
+          opacity: 1;
+        }
+      }
+      
+		}
+		// .menu__link
+		&__link {
+      opacity: 0.6;
+      font-weight: 500;
+      color: inherit;
+      transition: opacity 0.3s ease 0s;
+		}
+		// .menu__icon
+		&__icon {
+		}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
